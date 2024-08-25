@@ -1,0 +1,22 @@
+{
+  "name": "uploader-r2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Sazumi Viki",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1620.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "mime-types": "^2.1.35",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,147 @@
+<!--
+dev: Sazumi Viki
+ig: <a href="https://www.instagram.com/moe.sazumiviki">@moe.sazumiviki</a>
+gh: <a href="https://github.com/sazumivicky">github.com/sazumivicky</a>
+site: <a href="https://sazumi.moe">sazumi.moe</a>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sazumi Cloud - Upload more, wait less.</title>
+  <meta name="description" content="With our global CDN, upload your files anywhere with exceptional speed and reliability.">
+  <link rel="icon" class=js-site-favicon type=image/ico href="https://cdn.jsdelivr.net/gh/SazumiVicky/Storage@main/sazumiviki-ico.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Sazumi Cloud CDN File Uploader</h1>
+      <p>Made With <span class="heart">❤️</span> by Viki ~</p>
+    </div>
+    <form id="uploadForm">
+      <label for="fileInput" class="file-label"><i class="far fa-folder"></i> Choose a file or drop it here...</label>
+      <input type="file" name="file" id="fileInput">
+      <button type="submit" class="upload-button">Upload</button>
+    </form>
+    <div class="preview" id="preview"></div>
+    <div class="history">
+      <h2>History:</h2>
+    <hr>
+      <div id="history"></div>
+    </div>
+    <div class="stats">
+      <div class="stats-box">
+        <p>Total Files</p>
+        <p id="totalFiles"><i class="fas fa-spinner fa-spin"></i></p>
+      </div>
+      <div class="stats-box">
+        <p>Total Size</p>
+        <p id="totalSize"><i class="fas fa-spinner fa-spin"></i></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-container">
+    <div class="about-header">
+      <h2>About</h2>
+    </div>
+    <div class="about-content">
+      <p>With our global CDN, upload your files anywhere with exceptional speed and reliability.</p>
+      <img src="./src/about_icon.png" alt="Icon">
+    </div>
+  </div>
+  <div class="go-container">
+    <a href="https://github.com/sazumivicky" class="go-button github">Github</a>
+    <a href="#" class="go-button donation">Donation</a>
+  </div>
+  <div class="container-you">
+    <h2>About You</h2>
+    <p>IP Address: <span id="ipAddress"></span></p>
+    <p>Country: <span id="country"></span></p>
+    <p>Region: <span id="region"></span></p>
+    <p>Zip Code: <span id="zipCode"></span></p>
+    <p>Languages: <span id="languages"></span></p>
+    <p>Time Zone: <span id="timeZone"></span></p>
+  </div>
+  <div class="container-review">
+    <div class="review-slide">
+      <img src="./src/realtime_review/user/icon_m.png" alt="Mimi Taufan">
+      <p><b>Mimi Taufan</b></p>
+      <p>Wah keren nih, gua suka sama style nya ga ribet</p>
+      <p class="star-review">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+      </p>
+    </div>
+    <div class="review-slide">
+      <img src="./src/realtime_review/user/icon_r.png" alt="Riza">
+      <p><b>Riza</b></p>
+      <p>Bagus sih cuman kayaknya harus gedein lagi limitnya, misalnya 1gb hehe</p>
+      <p class="star-review">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+      </p>
+    </div>
+    <div class="review-slide">
+      <img src="./src/realtime_review/user/icon_r.png" alt="Rie Silvanus">
+      <p><b>Rie Silvanus</b></p>
+      <p>Wow, I like this, the uploader is very easy without any upload limit</p>
+      <p class="star-review">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+      </p>
+    </div>
+    <div class="review-slide">
+      <img src="./src/realtime_review/user/icon_r.png" alt="Rendi Permana">
+      <p><b>Rendi Permana</b></p>
+      <p>Keren dan simple, saya udah pakai ini sejak lama</p>
+      <p class="star-review">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+      </p>
+    </div>
+    <div class="review-slide">
+      <img src="./src/realtime_review/user/icon_Đ.png" alt="Đào Quảng Ðạt">
+      <p><b>Đào Quảng Ðạt</b></p>
+      <p>I'm uploading my media here to share online, is there any documentation for using in Golang?</p>
+      <p class="star-review">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+      </p>
+    </div>
+  </div>
+  <div class="gist-container">
+    <h2>Gist Code Snippet</h2>
+    <script src="https://gist.github.com/SazumiVicky/923e54dc9c192a71f0879972dae54650.js"></script>
+  </div>
+  <div class="donasi-popup" id="donasiPopup">
+    <div class="donasi-popup-content">
+      <h2>Thanks For Donation</h2>
+      <img src="./src/img/donation_qris.png" alt="QRIS">
+      <button id="closeDonasiPopup">Close</button>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>Developed by Sazumi Viki 2023 - <span id="currentYear"></span></p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
